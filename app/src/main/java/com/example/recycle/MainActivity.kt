@@ -13,7 +13,8 @@ import kotlinx.android.synthetic.main.folder_item.view.*
 
 class MainActivity : AppCompatActivity() {
 
-    // Шаг 1. Обьявили список
+    // Шаг 1. Обьявили список, создали Layout файл для одного елемента списка RecycleView и присвоили ему ID.
+    // Добавили RecyclerView Widget в Мейн Активити XML и дали ему тоже ID
 
     var animals: ArrayList<String> = ArrayList()
 
@@ -32,13 +33,14 @@ class MainActivity : AppCompatActivity() {
 
 
     }
-    // Обьявляем класс Адаптера с 2 параметрами (Наш массив и контекст) который расширяет наш класс ViewHolder
+    // Обьявляем класс Адаптера с 2 параметрами (Наш массив и контекст) который расширяет наш класс ViewHolder.
+    // На ошибки закрываем глаза, как только напишем свой класс ViewHolder, ошибка исчезнет.
 
     class RecyclerAdapter(val items: ArrayList<String>, val context: Context) : RecyclerView.Adapter<RecyclerAdapter.ViewHolder>(){
 
         // Переписываем 3 метода
 
-        // Получаем для каждого елемента View*шку через inflater
+        // Получаем для каждого елемента View*шку через inflater, указываем ID xml, где наш один елемент списка RecyclerView
 
         override fun onCreateViewHolder(p0: ViewGroup, p1: Int): ViewHolder {
 
