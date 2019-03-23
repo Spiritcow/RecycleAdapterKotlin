@@ -75,6 +75,7 @@ class MainActivity : AppCompatActivity() {
         animals.add("owl")
         animals.add("DOG")
         animals.add("Sobaka")
+        animals.add("ELF")
 
     }
 }
